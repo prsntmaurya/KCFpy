@@ -32,7 +32,7 @@ python run.py ./test.avi
 Try different options (hog/gray, fixed/flexible window, singlescale/multiscale) of KCF tracker by modifying the arguments in line `tracker = kcftracker.KCFTracker(False, True, False)  # hog, fixed_window, multiscale` in run.py.
 
 
-### Peoblem
+### Problem
 I have struggled to make this python implementation as fast as possible, but it's still 2 ~ 3 times slower than its C++ counterpart, furthermore, the use of Numba introduce some unpleasant delay when initializing tracker (***NEW:*** the problem has been solved in [KCFnb](https://github.com/uoip/KCFnb) by using AOT compilation).
 
 ***NEWER:*** I write a python wrapper for KCFcpp, see [KCFcpp-py-wrapper](https://github.com/uoip/KCFcpp-py-wrapper), so we can benefit from C++'s speed in python now.
